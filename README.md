@@ -1,84 +1,68 @@
-# Simple Web Application Coding Challenge
-> Welcome to the Geekwise Restaurant Ordering Web Application Challenge
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Overview
+## Available Scripts
 
-To complete this challenge, you will need to write a simple restaurant ordering web application, and provide the source files by sending a link of your github repository when you have completed the project. You will be asked to build the project in either the [React](https://reactjs.org/) or [Angular](https://angular.io/) javascript framework.
+In the project directory, you can run:
 
-The purpose of this challenge is to assess your **skills and approach to composing a simple web app** given a set of screens. Your github flow and processes will also be assessed. 
+### `npm start`
 
-## The Challenge
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-You will begin by creating your own project repository naming it "geekwise-restaurant-application"
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-You are to build the project in either the [React](https://reactjs.org/) or [Angular](https://angular.io/) javascript based framework. The designs for the project are provided for you in the [screens](./screens/) folder. You must also use a styling framework to help create a responsively styled application. *Bootstrap is preferred. 
+### `npm test`
 
-Although this is a basic exercise, we'll be looking for **simple, well-designed, performant, and tested code** in the submission.
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Please include a `README` with setup instructions, and any tests or other documentation you created as part of your solution.
+### `npm run build`
 
-Also, add the following info to your `README`:
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-- Why did you decide on the framework choice you used as part of your solution?
-- Are there any improvements you could make to your submission?
-- What would you do differently if you were given more time?
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-## Details
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-You will need to build the following 4 pages:
+### `npm run eject`
 
-- A "Landing" page
-- A "Login" page
-- An "Order" page
-- A "View Orders" page
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-Please create components for each part of the page (eg. header, navigation menu, footer, etc). It is ok to use static content for this project.
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-The pages must be responsive and usable on mobile and tablet devices.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-### "Landing" Page
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-Refer to the [screens/1-landing.png](./screens/1-landing.png) screen.
+## Learn More
 
-The "Go To Login" button must navigate to the login screen.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-### "Login" Page
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-Refer to the [screens/2-login.png](./screens/2-login.png) screen.
+### Code Splitting
 
-The login page will contain a simple form with an email and password inputs. The login button must navigate to the Order page.
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### "Order" Page
+### Analyzing the Bundle Size
 
-Refer to the [screens/3-order.png](./screens/3-order.png) screen.
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-The order page will contain a simple form with the ability to select from a minimum of 4 lunch items, set the quantity of the items being ordered and contain an order now button. A simple success alert upon ordering must be added.
+### Making a Progressive Web App
 
-### "View Orders" Page
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-Refer to the [screens/4-view-orders.png](./screens/4-view-orders.png) screen.
+### Advanced Configuration
 
-The view orders screen should contain a minimum of two orders that have been submitted. If possible you should create data sets and services that dynamically allow you to add an order and view recent orders. However, it is ok to have hard coded content in this project.
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-## Bonus!
+### Deployment
 
-While it is ok to add hard coded content for this project, it will be a bonus if you can create data models, and services that allow you to dynamically submit an order as well as view recent orders.
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-## Bonus Bonus!
+### `npm run build` fails to minify
 
-Extra bonus if you create your own API that allows you to login, submit orders and view recent orders
-
-## Github Programming Flow
-
-It will be important that you create a branch for each screen and feature that you program. After each screen or featured component is completed merge your work to your main working branch. We will assess your github flow and practices as part of your coding challenge
-
-## Useful Links
-
-- [Google Fonts](https://fonts.google.com/)
-- [React](https://facebook.github.io/react/)
-- [Angular](https://angular.io/)
-- [Bootstrap](https://getbootstrap.com/)
-
-## Other Notes
-
-Please send through any other code or projects that you're proud of and would like to share with us.
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
