@@ -2,6 +2,7 @@ import React from 'react';
 import LandingPage from './components/LandingPage';
 import Login from './components/Login';
 import Order from './components/Order';
+import ViewOrders from './components/View-Orders';
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,7 +19,7 @@ function App() {
       <Router>
         <Switch>
           <Route path="/view-orders">
-            <Login />
+            <ViewOrders />
           </Route>
           <Route path="/order">
             <Order />

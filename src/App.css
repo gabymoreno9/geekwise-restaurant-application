@@ -94,3 +94,10 @@
     padding-left: 2rem;
   }
 }
+
+a{
+  font-size: 30px;
+}
+.dropdown{
+  margin-top: 20px;
+}
