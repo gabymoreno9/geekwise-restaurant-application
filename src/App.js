@@ -1,6 +1,12 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
-import burger from './images/burger.jpeg';
+import LandingPage from './components/LandingPage';
+import Login from './components/Login';
+import Order from './components/Order';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -9,13 +15,22 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header" style={{ backgroundImage:`url(${burger})` }}>
-        <p>
-          Welcome to Bruce's Diner
-        </p>
-        
-        <Button variant="secondary">Login</Button>
-      </header>
+      <Router>
+        <Switch>
+          <Route path="/view-orders">
+            <Login />
+          </Route>
+          <Route path="/order">
+            <Order />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/">
+            <LandingPage />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

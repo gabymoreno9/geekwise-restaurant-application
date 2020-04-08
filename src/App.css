@@ -1,3 +1,6 @@
+* { font-family: "Helvetica Neue", Helvetica, sans-serif; 
+    font-weight: 300; }
+
 .App {
   text-align: center;
 }
@@ -39,5 +42,55 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Landing Page */
+.login-form form {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-control{
+  width: 70%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: inline;
+  padding: 3.175rem 0.75rem;
+  font-size: 2.5rem;
+}
+
+.input-group-text img {
+  width: 40px;
+}
+
+.logo img{
+  width: 20%;
+  margin-top: 150px;
+}
+
+.btn-primary{
+  background-color: #00B38C;
+  border-color: #00B38C;
+}
+
+.nav-link{
+  font-size: 40px;
+}
+
+.navbar-brand{
+  font-size: 3.25rem;
+  line-height: 70px;
+}
+
+@media (min-width: 995px){
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: .5rem;
+    padding-left: 2rem;
   }
 }
