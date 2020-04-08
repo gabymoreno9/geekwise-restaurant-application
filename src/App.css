@@ -101,3 +101,10 @@ a{
 .dropdown{
   margin-top: 20px;
 }
+.table td, .table th {
+  font-size: 40px;
+}
+
+.table .btn{
+  margin-top:0px;
+}

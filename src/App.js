@@ -13,16 +13,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 
-function App() {
-  return (
+class App extends React.Component {
+  state = { orders: [] }
+
+  render = () =>
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/view-orders">
-            <ViewOrders />
+          <Route path="/view-order">
+            <ViewOrders orders={this.state.orders} />
           </Route>
           <Route path="/order">
-            <Order />
+            <Order handleSubmitOrder={orders => this.setState({ orders })} />
           </Route>
           <Route path="/login">
             <Login />
@@ -33,7 +35,6 @@ function App() {
         </Switch>
       </Router>
     </div>
-  );
 }
 
 export default App;

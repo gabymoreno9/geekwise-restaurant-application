@@ -28,6 +28,18 @@ class Order extends React.Component {
       orderQuantity: null,
       orders: []
     }
+
+    handleAddToOrder = () =>
+        this.setState({
+          orderItem: null,
+          orderQuantity: null,
+          orders: this.state.orders.concat ([{ item: menuItems[this.state.orderItem], quantity: this.state.orderQuantity }])
+        })
+
+    handleSubmitOrder = () => {
+      this.props.handleSubmitOrder(this.state.orders)
+      this.props.history.push("/view-order")
+    }
  
     render = () =>
       <>
@@ -46,16 +58,19 @@ class Order extends React.Component {
         <DropdownButton
           size="sm"
           variant="secondary"
-          title="Quantity"
-          onSelect={value => console.log(value)}>
+          title={this.state.orderQuantity || "Quantity"}
+          onSelect={value => this.setState({ orderQuantity: value })}>
           <Dropdown.Item eventKey="1">1</Dropdown.Item>
           <Dropdown.Item eventKey="2">2</Dropdown.Item>
           <Dropdown.Item eventKey="3">3</Dropdown.Item>
         </DropdownButton>
     
-        <Button variant="success" onClick={() => this.props.history.push('/view-orders')}>Submit Order</Button>{' '}<br />
-
-
+        <Button variant="dark" onClick={this.handleAddToOrder}>Add to Order</Button>
+        <br/>
+        <br/>
+    
+        <Button variant="success" onClick={this.handleSubmitOrder}>Submit Order</Button>
+        <br/>
         <br/>
         <div>
       <Table responsive="md">
@@ -66,17 +81,16 @@ class Order extends React.Component {
             <th>Ordered By</th>
             <th>Order Placed At</th>
             <th>Delete Order</th>
-
-    
           </tr>
         </thead>
         <tbody>
           {this.state.orders.map(order =>
             <tr>
-              <td>1</td>
+              <td>{order.quantity}</td>
+              <td>{order.item}</td>
               <td>Table cell</td>
               <td>Table cell</td>
-              <td>Table cell</td>
+              <td> <Button variant="danger">Delete</Button> </td>
             </tr>)}
         </tbody>
       </Table>

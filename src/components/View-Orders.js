@@ -15,7 +15,6 @@ import logo2 from "../images/logo2.png"
 
 
 class ViewOrders extends React.Component {
- 
     render = () =>
     <>
         <NavBar />
@@ -34,7 +33,7 @@ class ViewOrders extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {this.state.orders.map(order =>
+            {this.props.orders.map(order =>
               <tr>
                 <td>1</td>
                 <td>Table cell</td>
