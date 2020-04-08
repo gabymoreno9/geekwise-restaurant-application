@@ -10,6 +10,8 @@ import Table from 'react-bootstrap/Table';
 import NavBar from './Navbar';
 import Button from 'react-bootstrap/Button';
 import logo2 from "../images/logo2.png"
+import { withRouter } from "react-router-dom";
+
 
 const menuItems = [
   "Tacos De Papa (Includes sides of rice and pinto beans)",
@@ -50,8 +52,10 @@ class Order extends React.Component {
           <Dropdown.Item eventKey="2">2</Dropdown.Item>
           <Dropdown.Item eventKey="3">3</Dropdown.Item>
         </DropdownButton>
-      
-        <Button variant="success">Submit Order</Button>{' '}<br />
+    
+        <Button variant="success" onClick={() => this.props.history.push('/view-orders')}>Submit Order</Button>{' '}<br />
+
+
         <br/>
         <div>
       <Table responsive="md">
@@ -126,4 +130,4 @@ const CustomToggle = React.forwardRef(({ children, onClick }, ref) =>
     });
 
 
-export default Order
+export default withRouter(Order)
