@@ -89,7 +89,7 @@ class Order extends React.Component {
               <td>{order.quantity}</td>
               <td>{order.item}</td>
               <td>gabi456</td>
-              <td>Table cell</td>
+              <td>04/08/2020 2:34pm</td>
               <td> <Button variant="danger">Delete</Button> </td>
             </tr>)}
         </tbody>
