@@ -27,7 +27,6 @@ class ViewOrders extends React.Component {
               <th>Food Ordered</th>
               <th>Ordered By</th>
               <th>Order Placed At</th>
-              <th>Delete Order</th>
   
       
             </tr>
@@ -35,9 +34,9 @@ class ViewOrders extends React.Component {
           <tbody>
             {this.props.orders.map(order =>
               <tr>
-                <td>1</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
+                <td>{order.quantity}</td>
+                <td>{order.item}</td>
+                <td>gabi456</td>
                 <td>Table cell</td>
               </tr>)}
           </tbody>
