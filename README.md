@@ -30,13 +30,16 @@ The login page is a bit sparse and if I had more time I would design the mobile 
 
 ## Order Page
 -------------
-![](https://i.ibb.co/Cs4Pr0V/Screen-Shot-2020-04-08-at-4-37-59-PM.png)
-The orders page has an interesting ordering format. I think if I had more time I would have tried to flesh out the functionality a bit better.
+![](https://i.ibb.co/M6YJXsK/Screen-Shot-2020-04-09-at-2-03-39-PM.png)
+The orders page has an interesting ordering format. I wanted to figure out a way to be able to notify
+a user that they made an order or chose something so I added a table that gets orders added to it 
+as the user clicks on the Add To Order button. They are also able to delete orders.
 
 ## View Orders Page
 -------------
-![] (https://i.ibb.co/SVp8rDt/Screen-Shot-2020-04-08-at-4-35-29-PM.png)
-The view orders page is a table where it shows what all past orders were.
+![](https://i.ibb.co/wMHVN72/Screen-Shot-2020-04-09-at-2-03-48-PM.png)
+The view orders page is a table where it shows what all past orders were. Its a page that assumes the 
+user has finished paying and it is kind of like a receipt.
 
 
 
