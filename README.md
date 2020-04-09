@@ -10,12 +10,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     + I chose React because it is what was still fresh in my head. 
 
 2. Are there any improvements you could make to your submission?
-    + I think i could have mapped ou the interactions between screens a bit better. I also wanted to do more extensive testing on different devices.
+    + I think i could have mapped out the interactions between screens a bit better. I also wanted to do more extensive testing on different devices. 
 
 3. What would you do differently if you were given more time?
     + If I was given more time, I would work towards developing more of the backend. For example, I was able to get
     everything but the "Order Placed At" section. Instead, it is hard Coded in.
-    I would also try to make it more responsive.
+    I would also try to make it more responsive. I would also create tests for the app.
 
 
 ## Landing Page
@@ -30,16 +30,16 @@ The login page is a bit sparse and if I had more time I would design the mobile 
 
 ## Order Page
 -------------
-![](https://i.ibb.co/M6YJXsK/Screen-Shot-2020-04-09-at-2-03-39-PM.png)
+![](https://i.ibb.co/dDdYPgb/Screen-Shot-2020-04-09-at-4-31-34-PM.png)
 The orders page has an interesting ordering format. I wanted to figure out a way to be able to notify
 a user that they made an order or chose something so I added a table that gets orders added to it 
 as the user clicks on the Add To Order button. They are also able to delete orders.
 
 ## View Orders Page
 -------------
-![](https://i.ibb.co/wMHVN72/Screen-Shot-2020-04-09-at-2-03-48-PM.png)
+![](https://i.ibb.co/5RM2pPf/Screen-Shot-2020-04-09-at-4-32-11-PM.png)
 The view orders page is a table where it shows what all past orders were. Its a page that assumes the 
-user has finished paying and it is kind of like a receipt.
+user has finished paying and it is kind of like a receipt. I also added the delete functionality/
 
 
 
