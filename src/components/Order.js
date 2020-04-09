@@ -13,7 +13,7 @@ import NavBar from './Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const menuItems = [
-  "Tacos De Papa (Includes sides of rice and pinto beans)",
+  "Tacos De Papa",
   "Hamburger with Fries",
   "Chicken Tenders with Fries",
   "Quesadilla de Asada",
@@ -87,14 +87,15 @@ class Order extends React.Component {
         </Row>
 
       <div>
+        <br/>
       <Table responsive="md">
         <thead>
           <tr>
-            <th>#</th>
-            <th>Food Ordered</th>
-            <th>Ordered By</th>
-            <th>Order Placed At</th>
-            <th>Delete Order</th>
+            <th><h2>#</h2></th>
+            <th><h2>Order Placed At</h2></th>
+            <th><h2>Ordered By</h2></th>
+            <th><h2>Order Placed At</h2></th>
+            <th><h2>Delete Order</h2></th>
           </tr>
         </thead>
         <tbody>

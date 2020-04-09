@@ -10,7 +10,7 @@ import logo2 from "../images/logo2.png"
 export default function NavBar() {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-            <Navbar.Brand href="#home">
+            <Navbar.Brand href="/">
                 <img alt="" src={logo2} width="130" height="130" className="d-inline-block align-top"/>
                 {' '}
 
@@ -18,7 +18,7 @@ export default function NavBar() {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                    <Navbar.Brand href="#home">Bruce's Diner</Navbar.Brand>
+                    <Navbar.Brand href="/">Bruce's Diner</Navbar.Brand>
                     <Nav.Link href="/order">Order Form</Nav.Link>
                     <Nav.Link href="/view-order">View Order</Nav.Link>
                     <Nav.Link href="/sign-out">Sign Out</Nav.Link>

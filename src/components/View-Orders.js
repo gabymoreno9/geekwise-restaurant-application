@@ -24,10 +24,9 @@ class ViewOrders extends React.Component {
         <Table responsive="md">
           <thead>
             <tr>
-              <th>#</th>
-              <th>Food Ordered</th>
-              <th>Ordered By</th>
-              <th>Order Placed At</th>
+              <th><h2>Food Ordered</h2></th>
+              <th><h2>Ordered By</h2></th>
+              <th><h2>Order Placed At</h2></th>
   
       
             </tr>
@@ -35,10 +34,12 @@ class ViewOrders extends React.Component {
           <tbody>
             {this.props.orders.map(order =>
               <tr>
-                <td>{order.quantity}</td>
                 <td>{order.item}</td>
                 <td>gabi456</td>
-                <td>04/08/2020 2:34pm</td>
+                <td>04/08/2020 2:34pm
+                    <br/>
+                    Quantity: {order.quantity}
+                </td>
               </tr>)}
           </tbody>
         </Table>
