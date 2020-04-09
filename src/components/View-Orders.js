@@ -19,6 +19,7 @@ class ViewOrders extends React.Component {
     <>
         <NavBar />
 
+       <h1>Thank you for choosing Bruce's Diner</h1> 
         <div>
         <Table responsive="md">
           <thead>

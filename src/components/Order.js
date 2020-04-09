@@ -1,17 +1,16 @@
+import uuid from 'uuid/v4'
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
 import FormControl from 'react-bootstrap/FormControl';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Table from 'react-bootstrap/Table';
-
-import NavBar from './Navbar';
 import Button from 'react-bootstrap/Button';
-import logo2 from "../images/logo2.png"
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import { withRouter } from "react-router-dom";
 
+import NavBar from './Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const menuItems = [
   "Tacos De Papa (Includes sides of rice and pinto beans)",
@@ -33,7 +32,14 @@ class Order extends React.Component {
         this.setState({
           orderItem: null,
           orderQuantity: null,
-          orders: this.state.orders.concat ([{ item: menuItems[this.state.orderItem], quantity: this.state.orderQuantity }])
+          orders: this.state.orders.concat ([
+            { id: uuid(), item: menuItems[this.state.orderItem], quantity: this.state.orderQuantity }
+          ])
+        })
+
+    handleDeleteFromOrder = idToDelete =>
+        this.setState({
+          orders: this.state.orders.filter (order => order.id !== idToDelete)
         })
 
     handleSubmitOrder = () => {
@@ -44,35 +50,43 @@ class Order extends React.Component {
     render = () =>
       <>
         <NavBar />
-        <Dropdown onSelect={value => this.setState({ orderItem: value })}>
-            <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
-                {menuItems[this.state.orderItem] || "I'd like to order..."}
-            </Dropdown.Toggle>
-        
-            <Dropdown.Menu as={CustomMenu}>
-                {menuItems.map((item, index) =>
-                  <Dropdown.Item key={index} eventKey={index}>{item}</Dropdown.Item>)}
-            </Dropdown.Menu>
-        </Dropdown>
 
-        <DropdownButton
-          size="sm"
-          variant="secondary"
-          title={this.state.orderQuantity || "Quantity"}
-          onSelect={value => this.setState({ orderQuantity: value })}>
-          <Dropdown.Item eventKey="1">1</Dropdown.Item>
-          <Dropdown.Item eventKey="2">2</Dropdown.Item>
-          <Dropdown.Item eventKey="3">3</Dropdown.Item>
-        </DropdownButton>
+        <Row>
+        <Col xs="12" md="3">
+            <Dropdown onSelect={value => this.setState({ orderItem: value })}>
+                <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
+                    {menuItems[this.state.orderItem] || "I'd like to order..."}
+                </Dropdown.Toggle>
+            
+                <Dropdown.Menu as={CustomMenu}>
+                    {menuItems.map((item, index) =>
+                      <Dropdown.Item key={index} eventKey={index}>{item}</Dropdown.Item>)}
+                </Dropdown.Menu>
+            </Dropdown>
+        </Col>
+
+        <Col xs="12" md="3">
+            <DropdownButton
+              size="sm"
+              variant="secondary"
+              title={this.state.orderQuantity || "Quantity"}
+              onSelect={value => this.setState({ orderQuantity: value })}>
+              <Dropdown.Item eventKey="1">1</Dropdown.Item>
+              <Dropdown.Item eventKey="2">2</Dropdown.Item>
+              <Dropdown.Item eventKey="3">3</Dropdown.Item>
+            </DropdownButton>
+        </Col>
     
-        <Button variant="dark" onClick={this.handleAddToOrder}>Add to Order</Button>
-        <br/>
-        <br/>
+        <Col xs="12" md="3">
+          <Button variant="dark" onClick={this.handleAddToOrder}>Add to Order</Button>
+        </Col>
     
-        <Button variant="success" onClick={this.handleSubmitOrder}>Submit Order</Button>
-        <br/>
-        <br/>
-        <div>
+        <Col xs="12" md="3">
+          <Button variant="success" onClick={this.handleSubmitOrder}>Submit Order</Button>
+        </Col>
+        </Row>
+
+      <div>
       <Table responsive="md">
         <thead>
           <tr>
@@ -90,7 +104,7 @@ class Order extends React.Component {
               <td>{order.item}</td>
               <td>gabi456</td>
               <td>04/08/2020 2:34pm</td>
-              <td> <Button variant="danger">Delete</Button> </td>
+              <td> <Button variant="danger"  onClick={() => this.handleDeleteFromOrder(order.id)}>Delete</Button> </td>
             </tr>)}
         </tbody>
       </Table>
