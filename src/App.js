@@ -1,3 +1,4 @@
+import uuid from 'uuid/v4';
 import React from 'react';
 import LandingPage from './components/LandingPage';
 import Login from './components/Login';
@@ -14,17 +15,25 @@ import './App.css';
 
 
 class App extends React.Component {
-  state = { orders: [] }
+  state = { 
+    orders: [
+      { id: uuid(), item: "Tacos De Papa", quantity: 2 },
+      { id: uuid(), item: "Agua De Jamaica", quantity: 1 }
+    ]
+  }
+
+  handleDeleteFromOrder = idToDelete =>
+    this.setState({ orders: this.state.orders.filter (order => order.id !== idToDelete) })
 
   render = () =>
     <div className="App">
       <Router>
         <Switch>
           <Route path="/view-order">
-            <ViewOrders orders={this.state.orders} />
+            <ViewOrders orders={this.state.orders} handleDeleteFromOrder={this.handleDeleteFromOrder} />
           </Route>
           <Route path="/order">
-            <Order handleSubmitOrder={orders => this.setState({ orders })} />
+            <Order handleSubmitOrder={orders => this.setState({ orders: this.state.orders.concat(orders) })} />
           </Route>
           <Route path="/login">
             <Login />

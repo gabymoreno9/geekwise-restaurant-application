@@ -54,7 +54,7 @@ class Order extends React.Component {
         <Row>
         <Col xs="12" md="3">
             <Dropdown onSelect={value => this.setState({ orderItem: value })}>
-                <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
+                <Dropdown.Toggle id="dropdown-custom-components">
                     {menuItems[this.state.orderItem] || "I'd like to order..."}
                 </Dropdown.Toggle>
             
@@ -100,7 +100,7 @@ class Order extends React.Component {
         </thead>
         <tbody>
           {this.state.orders.map(order =>
-            <tr>
+            <tr key={order.id}>
               <td>{order.quantity}</td>
               <td>{order.item}</td>
               <td>gabi456</td>
@@ -113,23 +113,6 @@ class Order extends React.Component {
     </div>
       </>
 }
-
-
-
-// The forwardRef is important!!
-// Dropdown needs access to the DOM node in order to position the Menu
-const CustomToggle = React.forwardRef(({ children, onClick }, ref) =>
-    <a
-      href=""
-      ref={ref}
-      onClick={(e) => {
-        e.preventDefault();
-        onClick(e);
-      }}
-    >
-      {children}
-      &#x25bc;
-    </a>)
   
   // forwardRef again here!
   // Dropdown needs access to the DOM of the Menu to measure it
